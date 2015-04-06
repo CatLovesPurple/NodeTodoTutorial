@@ -1,0 +1,65 @@
+<html ng-app="todo" style="">
+    <head>
+
+    </head>
+
+
+    <!--<div id="todo-form" class="row">-->
+        <!--<div class="col-sm-8 col-sm-offset-2 text-center">-->
+            <!--<form>-->
+                <!--<div class="form-group">-->
+
+                    <!--&lt;!&ndash; BIND THIS VALUE TO formData.text IN ANGULAR &ndash;&gt;-->
+                    <!--<input type="text" class="form-control input-lg text-center" placeholder="I want to buy a puppy that will love me forever" ng-model="formData.text">-->
+                <!--</div>-->
+
+                <!--&lt;!&ndash; createToDo() WILL CREATE NEW TODOS &ndash;&gt;-->
+                <!--<button type="submit" class="btn btn-primary btn-lg" ng-click="createTodo()">Add</button>-->
+            <!--</form>-->
+        <!--</div>-->
+    <!--</div>-->
+
+
+
+    <body ng-controller="main" style="margin-top:2%;color:#ffffff; background:#2E2E2E;">
+    <div class="col-md-12 text-center"><h1>Add your TODO</h1></div>
+    <div class="row">
+        <div class="form-inline col-md-12 col-md-offset-2"  style="margin-bottom:5%;">
+            <form ng-submit="submitForm()">
+                <div class="form-group col-md-3">
+                    <input class="form-control" type="text" ng-model="formData.title" placeholder="Input todo title"><br>
+                </div>
+                <div class="form-group col-md-3">
+                    <input class="form-control" type="text" ng-model="formData.content" placeholder="input todo content"><br>
+                </div>
+                <button class="btn btn-success col-md-2">Add</button>
+            </form>
+        </div>
+        <div class="col-md-12 text-center col-md-offset-1">
+                <div ng-repeat="item in todoitems">
+                    <div class="checkbox text-center" id="">
+                        <label>
+                            <input type="checkbox" ng-click="delete(item._id)"/>
+                        </label>
+                            <div class="col-md-3">{{item.title}}</div>
+                            <div class="col-md-3">{{item.content}}</div>
+                            <div class="col-md-4">{{item.createDate}}</div>
+
+
+                    </div>
+                </div>
+
+        </div>
+    </div>
+    </body>
+
+
+    <script src="jquery.js"></script>
+    <script src="angular.js"></script>
+    <script src="main.js"></script>
+    <script src="controller.js"></script>
+    <script src="service.js"></script>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "ToDo",
+  "version": "0.0.1",
+  "dependencies": {},
+  "scripts": {
+    "start": "node server.js"
+  },
+  "description": "A todo app tutorial",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CatLovesPurple/NodeTodoTutorial.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "ToDo",
+    "Mongodb"
+  ],
+  "author": "littleStar",
+  "license": "04/2015",
+  "bugs": {
+    "url": "https://github.com/CatLovesPurple/NodeTodoTutorial/issues"
+  },
+  "homepage": "https://github.com/CatLovesPurple/NodeTodoTutorial"
+}
