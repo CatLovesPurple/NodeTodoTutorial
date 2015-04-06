@@ -8,7 +8,7 @@ var bodyParser = require("body-parser");
 var morgan = require("morgan");
 
 var app = express();
-var todoModel = require('./backend/model.js');
+var todoModel = require('./app/model.js');
 
 app.use(express.static(__dirname + '/frontend'));
 app.use(morgan('dev'));
@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
 var port = process.env.PORT || 9000;
-require('./backend/route.js')(app);
+require('./app/route.js')(app);
 
 app.listen(port, function() {
     console.log("Listening on " + port);
